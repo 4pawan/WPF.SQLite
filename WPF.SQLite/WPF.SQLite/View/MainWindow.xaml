@@ -1,11 +1,22 @@
-﻿<Window x:Class="WPF.SQLite.View.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModel="clr-namespace:WPF.SQLite.ViewModel" x:Class="WPF.SQLite.View.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="WPF with SQLite" Height="350" Width="525">
+    <Window.DataContext>
+        <viewModel:StartViewModel/>
+    </Window.DataContext>
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="29*"/>
+            <RowDefinition Height="29*"/>
+            <RowDefinition Height="291*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" HorizontalAlignment="Center" TextWrapping="Wrap" Text="WPF with SQLite" VerticalAlignment="Stretch"/>
+        <Button Grid.Row="1" Content="CreateDb" Command="{ Binding CreateDbCommand}"/>
+        <Grid Grid.Row="2"/>
     </Grid>
 </Window>
