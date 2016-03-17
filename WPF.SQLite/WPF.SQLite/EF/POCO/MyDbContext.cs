@@ -1,12 +1,15 @@
 using System.Data.Entity;
+using SQLite.CodeFirst;
 
 namespace WPF.SQLite.EF.POCO
 {
-    public partial class Model : DbContext
+    public class MyDbContext : DbContext
     {
-        public Model()
-            : base("name=DbContext")
+        public MyDbContext()
+            : base("name=SqliteEntities")
         {
+            Configuration.ProxyCreationEnabled = true;
+            Configuration.LazyLoadingEnabled = true;
         }
 
         public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
@@ -31,6 +34,9 @@ namespace WPF.SQLite.EF.POCO
                 .HasMany(e => e.AspNetUserLogins)
                 .WithRequired(e => e.AspNetUser)
                 .HasForeignKey(e => e.UserId);
+
+            var sqliteConnectionInitializer = new MyDbContextInitializer(modelBuilder);
+            Database.SetInitializer(sqliteConnectionInitializer);
         }
     }
 }

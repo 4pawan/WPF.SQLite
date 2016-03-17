@@ -7,6 +7,8 @@ using System.Windows;
 using System.Windows.Input;
 using GalaSoft.MvvmLight.Command;
 using Microsoft.Win32;
+using WPF.SQLite.EF.Entity;
+using WPF.SQLite.EF.POCO;
 
 namespace WPF.SQLite.ViewModel
 {
@@ -19,6 +21,12 @@ namespace WPF.SQLite.ViewModel
             CreateDbCommand = new RelayCommand(() =>
             {
                 MessageBox.Show("Hello !");
+                //var context = new MyDbContext();
+                var context = new FootballDbContext();
+                var teamlist = context.Set<Team>().ToList();
+
+                MessageBox.Show("DB creation done !");
+
             });
 
         }

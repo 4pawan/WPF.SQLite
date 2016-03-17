@@ -114,7 +114,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="EF\DbContext.cs" />
+    <Compile Include="EF\Entity\Coach.cs" />
+    <Compile Include="EF\Entity\CustomHistory.cs" />
+    <Compile Include="EF\Entity\FootballDbContext.cs" />
+    <Compile Include="EF\Entity\FootballDbInitializer.cs" />
+    <Compile Include="EF\Entity\IEntity.cs" />
+    <Compile Include="EF\Entity\Person.cs" />
+    <Compile Include="EF\Entity\Player.cs" />
+    <Compile Include="EF\Entity\Stadion.cs" />
+    <Compile Include="EF\Entity\Team.cs" />
     <Compile Include="EF\Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -135,7 +143,8 @@
     <Compile Include="EF\POCO\AspNetUserClaim.cs" />
     <Compile Include="EF\POCO\AspNetUserLogin.cs" />
     <Compile Include="EF\POCO\C__MigrationHistory.cs" />
-    <Compile Include="EF\POCO\Model.cs" />
+    <Compile Include="EF\POCO\MyDbContextInitializer.cs" />
+    <Compile Include="EF\POCO\MyDbContext.cs" />
     <Compile Include="Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
