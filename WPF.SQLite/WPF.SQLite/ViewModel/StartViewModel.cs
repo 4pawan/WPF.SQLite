@@ -7,6 +7,7 @@ using System.Windows;
 using System.Windows.Input;
 using GalaSoft.MvvmLight.Command;
 using Microsoft.Win32;
+using WPF.SQLite.EF.DBFirst;
 using WPF.SQLite.EF.Entity;
 using WPF.SQLite.EF.POCO;
 
@@ -53,6 +54,10 @@ namespace WPF.SQLite.ViewModel
                 }
 
                 MessageBox.Show("DB creation done !");
+
+
+                //var dbFirstContext = new SqliteDbFirstConn();
+                //var teamPlayers = dbFirstContext.TeamPlayers.ToList();
 
             });
 

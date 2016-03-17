@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WPF.SQLite.EF
+namespace WPF.SQLite.EF.DBFirst
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class SqliteEntities : DbContext
+    public partial class SqliteDbFirstConn : DbContext
     {
-        public SqliteEntities()
-            : base("name=SqliteEntities")
+        public SqliteDbFirstConn()
+            : base("name=SqliteDbFirstConn")
         {
         }
     
@@ -25,5 +25,8 @@ namespace WPF.SQLite.EF
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Coach> Coaches { get; set; }
+        public virtual DbSet<Stadion> Stadions { get; set; }
+        public virtual DbSet<TeamPlayer> TeamPlayers { get; set; }
     }
 }
