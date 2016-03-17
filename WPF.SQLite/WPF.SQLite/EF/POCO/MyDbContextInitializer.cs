@@ -8,7 +8,7 @@ using SQLite.CodeFirst;
 
 namespace WPF.SQLite.EF.POCO
 {
-    public class MyDbContextInitializer : SqliteCreateDatabaseIfNotExists<MyDbContext>
+    public class MyDbContextInitializer : SqliteDropCreateDatabaseAlways<MyDbContext>
     {
         public MyDbContextInitializer(DbModelBuilder modelBuilder) : base(modelBuilder)
         {

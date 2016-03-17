@@ -6,7 +6,7 @@ namespace WPF.SQLite.EF.POCO
     public class MyDbContext : DbContext
     {
         public MyDbContext()
-            : base("name=SqliteEntities")
+            : base("name=SqliteCodeFirstConn")
         {
             Configuration.ProxyCreationEnabled = true;
             Configuration.LazyLoadingEnabled = true;
