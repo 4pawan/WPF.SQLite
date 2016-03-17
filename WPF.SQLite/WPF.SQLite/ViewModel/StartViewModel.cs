@@ -20,11 +20,14 @@ namespace WPF.SQLite.ViewModel
         {
             CreateDbCommand = new RelayCommand(() =>
             {
-                MessageBox.Show("Hello !");
-                //var context = new MyDbContext();
+                //MessageBox.Show("Hello !");
+             
                 var context = new FootballDbContext();
-                var teamlist = context.Set<Team>().ToList();
-
+               
+                foreach (var team in context.Set<Team>())
+                {
+                    var aa = team;
+                }
                 MessageBox.Show("DB creation done !");
 
             });

@@ -4,10 +4,10 @@ using SQLite.CodeFirst;
 
 namespace WPF.SQLite.EF.Entity
 {
-    public class FootballDbInitializer : SqliteDropCreateDatabaseWhenModelChanges<FootballDbContext>
+    public class FootballDbInitializer : SqliteDropCreateDatabaseAlways<FootballDbContext>
     {
         public FootballDbInitializer(DbModelBuilder modelBuilder)
-            : base(modelBuilder, typeof(CustomHistory))
+            : base(modelBuilder)
         { }
 
         protected override void Seed(FootballDbContext context)

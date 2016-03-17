@@ -5,7 +5,7 @@ namespace WPF.SQLite.EF.Entity
     public class FootballDbContext : DbContext
     {
         public FootballDbContext()
-            : base("SqliteEntities")
+            : base("footballDb")
         {
             Configuration.ProxyCreationEnabled = true;
             Configuration.LazyLoadingEnabled = true;
