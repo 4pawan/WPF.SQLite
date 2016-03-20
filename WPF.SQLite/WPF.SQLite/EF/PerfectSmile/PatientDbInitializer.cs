@@ -9,11 +9,15 @@ namespace WPF.SQLite.EF.PerfectSmile
     {
         public PatientDbInitializer(DbModelBuilder modelBuilder)
             : base(modelBuilder)
-        { }
+        {
+        }
 
         protected override void Seed(PatientDbContext context)
         {
-            
+            base.Seed(context);
         }
+
+
+
     }
 }

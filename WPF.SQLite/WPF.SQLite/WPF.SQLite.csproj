@@ -157,7 +157,6 @@
     <Compile Include="EF\Entity\Player.cs" />
     <Compile Include="EF\Entity\Stadion.cs" />
     <Compile Include="EF\Entity\Team.cs" />
-    <Compile Include="EF\PerfectSmile\Model2.cs" />
     <Compile Include="EF\PerfectSmile\Patient.cs" />
     <Compile Include="EF\PerfectSmile\PatientDbContext.cs" />
     <Compile Include="EF\PerfectSmile\PatientDbInitializer.cs" />

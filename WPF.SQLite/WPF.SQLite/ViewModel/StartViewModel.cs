@@ -42,32 +42,27 @@ namespace WPF.SQLite.ViewModel
 
                 MessageBox.Show("Hello !");
 
-
-                
-
-
-                 var footballDbCdontext = new PatientDbContext();
-                foreach (var team in footballDbCdontext.Set<Patient>())
+                using (var footballDbCdontext = new PatientDbContext())
                 {
-                    var aa = team;
+                    foreach (var team in footballDbCdontext.Set<User>())
+                    {
+                        var aa = team;
+                    }
+
+
                 }
 
+                //var footballDbContext = new FootballDbContext();
+                //foreach (var team in footballDbContext.Set<Team>())
+                //{
+                //    var aa = team;
+                //}
 
-
-
-
-
-                var footballDbContext = new FootballDbContext();
-                foreach (var team in footballDbContext.Set<Team>())
-                {
-                    var aa = team;
-                }
-
-                var myDbContext = new MyDbContext();
-                foreach (var team in myDbContext.Set<AspNetUser>())
-                {
-                    var aa = team;
-                }
+                //var myDbContext = new MyDbContext();
+                //foreach (var team in myDbContext.Set<AspNetUser>())
+                //{
+                //    var aa = team;
+                //}
 
                 MessageBox.Show("DB creation done !");
 

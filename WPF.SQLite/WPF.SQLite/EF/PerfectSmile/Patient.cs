@@ -9,10 +9,10 @@ namespace WPF.SQLite.EF.PerfectSmile
     [Table("Patient")]
     public partial class Patient
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Patient()
         {
-            PatientHistories = new HashSet<PatientHistory>();
+            //PatientHistories = new HashSet<PatientHistory>();
         }
 
         public int Id { get; set; }
@@ -34,7 +34,7 @@ namespace WPF.SQLite.EF.PerfectSmile
         [Column(TypeName = "date")]
         public DateTime? ModifiedAt { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PatientHistory> PatientHistories { get; set; }
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        //public virtual ICollection<PatientHistory> PatientHistories { get; set; }
     }
 }

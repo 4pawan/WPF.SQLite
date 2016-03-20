@@ -7,7 +7,7 @@ namespace WPF.SQLite.EF.PerfectSmile
     using System.Data.Entity.Spatial;
 
     [Table("PatientHistory")]
-    public partial class PatientHistory
+    public class PatientHistory
     {
         public int Id { get; set; }
 
@@ -31,6 +31,6 @@ namespace WPF.SQLite.EF.PerfectSmile
         [Column(TypeName = "date")]
         public DateTime? CreatedAt { get; set; }
 
-        public virtual Patient Patient { get; set; }
+        //public virtual Patient Patient { get; set; }
     }
 }
