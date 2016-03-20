@@ -157,6 +157,12 @@
     <Compile Include="EF\Entity\Player.cs" />
     <Compile Include="EF\Entity\Stadion.cs" />
     <Compile Include="EF\Entity\Team.cs" />
+    <Compile Include="EF\PerfectSmile\Model2.cs" />
+    <Compile Include="EF\PerfectSmile\Patient.cs" />
+    <Compile Include="EF\PerfectSmile\PatientDbContext.cs" />
+    <Compile Include="EF\PerfectSmile\PatientDbInitializer.cs" />
+    <Compile Include="EF\PerfectSmile\PatientHistory.cs" />
+    <Compile Include="EF\PerfectSmile\User.cs" />
     <Compile Include="EF\POCO\AspNetRole.cs" />
     <Compile Include="EF\POCO\AspNetUser.cs" />
     <Compile Include="EF\POCO\AspNetUserClaim.cs" />

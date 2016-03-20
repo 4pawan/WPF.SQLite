@@ -9,6 +9,7 @@ using GalaSoft.MvvmLight.Command;
 using Microsoft.Win32;
 using WPF.SQLite.EF.DBFirst;
 using WPF.SQLite.EF.Entity;
+using WPF.SQLite.EF.PerfectSmile;
 using WPF.SQLite.EF.POCO;
 
 namespace WPF.SQLite.ViewModel
@@ -40,6 +41,21 @@ namespace WPF.SQLite.ViewModel
                 */
 
                 MessageBox.Show("Hello !");
+
+
+                
+
+
+                 var footballDbCdontext = new PatientDbContext();
+                foreach (var team in footballDbCdontext.Set<Patient>())
+                {
+                    var aa = team;
+                }
+
+
+
+
+
 
                 var footballDbContext = new FootballDbContext();
                 foreach (var team in footballDbContext.Set<Team>())
