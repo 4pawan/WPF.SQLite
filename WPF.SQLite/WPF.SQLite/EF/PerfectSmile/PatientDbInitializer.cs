@@ -14,7 +14,18 @@ namespace WPF.SQLite.EF.PerfectSmile
 
         protected override void Seed(PatientDbContext context)
         {
-            base.Seed(context);
+            context.Set<User>().Add(new User
+            {
+                Name = "pk",
+                Password = "pk"
+            });
+
+            context.Set<User>().Add(new User
+            {
+                Name = "sy",
+                Password = "sy"
+            });
+
         }
 
 

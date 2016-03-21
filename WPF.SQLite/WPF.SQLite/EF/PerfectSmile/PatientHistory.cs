@@ -15,22 +15,22 @@ namespace WPF.SQLite.EF.PerfectSmile
 
         public string TreatmentDone { get; set; }
 
-        [Column(TypeName = "money")]
+        //[Column(TypeName = "money")]
         public decimal PaymentDone { get; set; }
 
-        [Column(TypeName = "money")]
+        //[Column(TypeName = "money")]
         public decimal Balance { get; set; }
 
-        [Column(TypeName = "date")]
+        //[Column(TypeName = "date")]
         public DateTime? NextAppointment { get; set; }
 
         public string AdditionalComment { get; set; }
 
         public string CreatedBy { get; set; }
 
-        [Column(TypeName = "date")]
+        //[Column(TypeName = "date")]
         public DateTime? CreatedAt { get; set; }
 
-        //public virtual Patient Patient { get; set; }
+        public virtual Patient Patient { get; set; }
     }
 }

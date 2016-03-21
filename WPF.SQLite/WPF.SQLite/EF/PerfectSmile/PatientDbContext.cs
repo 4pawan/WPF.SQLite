@@ -6,14 +6,14 @@ namespace WPF.SQLite.EF.PerfectSmile
     public class PatientDbContext : DbContext
     {
 
-        //public virtual DbSet<Patient> Patients { get; set; }
-        //public virtual DbSet<PatientHistory> PatientHistories { get; set; }
-        //public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Patient> Patients { get; set; }
+        public virtual DbSet<PatientHistory> PatientHistories { get; set; }
+        public virtual DbSet<User> Users { get; set; }
 
 
 
         public PatientDbContext()
-            : base("footballDb")
+            : base("patientDbCF")
         {
             Configuration.ProxyCreationEnabled = true;
             Configuration.LazyLoadingEnabled = true;
