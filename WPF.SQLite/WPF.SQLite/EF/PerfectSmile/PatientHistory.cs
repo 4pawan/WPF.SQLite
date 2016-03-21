@@ -13,6 +13,7 @@ namespace WPF.SQLite.EF.PerfectSmile
 
         public int PatientId { get; set; }
 
+        [StringLength(8000)]
         public string TreatmentDone { get; set; }
 
         //[Column(TypeName = "money")]
@@ -24,8 +25,10 @@ namespace WPF.SQLite.EF.PerfectSmile
         //[Column(TypeName = "date")]
         public DateTime? NextAppointment { get; set; }
 
+        [StringLength(8000)]
         public string AdditionalComment { get; set; }
 
+        [StringLength(50)]
         public string CreatedBy { get; set; }
 
         //[Column(TypeName = "date")]
